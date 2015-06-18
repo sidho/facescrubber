@@ -1,0 +1,16 @@
+.scrubbed-post {
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #d3d6db;
+}
+
+.scrubbed-link {
+	color: #3b5998;
+  	cursor: pointer;
+  	text-decoration: none;
+}
+
+.scrubbed-link:hover {
+  	text-decoration: underline;
+}
+

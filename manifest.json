@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "FaceScrubber",
+  "description": "Scrub out all those annoying clickbait articles from your Facebook feed.",
+  "version": "0.5.0",
+  "author": "@sidho",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [
+    "https://www.facebook.com/",
+    "http://www.facebook.com/",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["js/inject.js"],
+    "persistent": false
+  },
+   "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+      "js": ["libs/jquery-2.1.4.min.js", "libs/lodash.min.js", "js/facescrubber.js"],
+      "css": ["css/facescrubber.css"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "page_action": {
+    "default_title": "FaceScrubber",
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_popup": "popup.html"
+  }
+}

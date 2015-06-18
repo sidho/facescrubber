@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Facescrubber Options</title>
+        <link rel="stylesheet" type="text/css" href="css/options.css">
+    </head>
+    <body>
+        <div class="enable-group">
+            <div class="options-header"><img src="images/icon48.png" alt="Facescrubber"></div>
+            <label>
+                <input type="checkbox" id="enable-facescrubber" name="enable-facescrubber" />
+                <span class="checkbox-label">Enable Facescrubber</span>
+            </label>
+        </div>
+        <div class="options">
+            <div class="overlay"></div>
+            <div class="options-header">Optional Filters</div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="filter-domains" name="filter-domains" />
+                    <span class="checkbox-label">Domain Filtering</span>
+                </label>
+                <div class="option-description">Blocks articles from clickbait abusing domains.</div>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="remove-lists" name="remove-lists" />
+                    <span class="checkbox-label">Simple List Filtering</span>
+                </label>
+                <div class="option-description">Removes lazy list articles by filtering titles that start with digits. This mode is extremely general, and not recommended.</div>
+                <div class="example">Correctly Filtered Example: "10 Corgis wearing sweaters that can't even"</div>
+                <div class="example">Incorrectly Filtered Example: "2016 NFL Season Preview"</div>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="remove-caps" name="remove-caps" />
+                    <span class="checkbox-label">Capslock Filtering</span>
+                </label>
+                <div class="option-description">Removes articles with titles that abuse the capslock key. This mode is not recommended as it will fail with acronyms.</div>
+                <div class="example">Correctly Filtered Example: "You will be SHOCKED by this celebrity's INCREDIBLE favorite brand of TOILET PAPER."</div>
+                <div class="example">Incorrectly Filtered Example: "NASA finds life on the moon"</div>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="enable-hardcore" name="enable-hardcore" />
+                    <span class="checkbox-label">Turn on Hardcore Filtering</span>
+                </label>
+                <div class="option-description">Strictest filtering method. Removes all articles with 'this' in the title. For when you absolutely need to catch all the clickbait and don't care what you miss because of it.</div>
+                <div class="example">Example: "Facescrubber is amazing, but when you enable this, you'll be STUNNED.</div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="save">Save</button> <span id="status">Your preferences have been updated.</span>
+        </div>
+
+        <script src="js/options.js"></script>
+    </body>
+</html>
