@@ -45,7 +45,7 @@ Shout out to Hartley Brody, his blog post [So You Want To Build A Chrome Extensi
 really helped me in building this.
 
 <p align="center">
-  <a href="http://sidho.me"><img src="./aimages/shgreenicon.jpg"/></a>
+  <a href="http://sidho.me"><img src="./images/shgreenicon.jpg"/></a>
 </p>
 
 #### License
